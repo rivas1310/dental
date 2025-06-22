@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Translation System</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .language-toggle { 
+            background: #007bff; 
+            color: white; 
+            padding: 10px 20px; 
+            border: none; 
+            cursor: pointer; 
+            margin-bottom: 20px;
+        }
+        .test-section { 
+            border: 1px solid #ddd; 
+            padding: 15px; 
+            margin: 10px 0; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Translation System Test</h1>
+    
+    <button class="language-toggle" id="languageToggle">
+        <img src="image/flags/spain.png" alt="Español" class="flag-icon" style="width: 20px; height: 15px;">
+        <span class="lang-text">ES</span>
+    </button>
+    
+    <div class="test-section">
+        <h2>Navigation Test</h2>
+        <nav>
+            <a href="#" data-translate="nav.home">Inicio</a> |
+            <a href="#" data-translate="nav.services">Servicios</a> |
+            <a href="#" data-translate="nav.about">Sobre mí</a> |
+            <a href="#" data-translate="nav.testimonials">Testimonios</a> |
+            <a href="#" data-translate="nav.cases">Casos</a> |
+            <a href="#" data-translate="nav.contact">Contacto</a>
+        </nav>
+    </div>
+    
+    <div class="test-section">
+        <h2>Hero Section Test</h2>
+        <h3 data-translate="home.hero.title">Tu <span class="highlight">Sonrisa Perfecta</span><br>Comienza Aquí</h3>
+        <p data-translate="home.hero.description">Transformamos sonrisas con tecnología de vanguardia y atención personalizada. Más de 10 años especializándose en ortodoncia y estética dental en Puerto Vallarta.</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Services Section Test</h2>
+        <h3 data-translate="home.services.title">Nuestros Servicios</h3>
+        <p data-translate="home.services.description">Ofrecemos una amplia gama de servicios dentales con la más alta calidad y tecnología moderna</p>
+        <h4 data-translate="home.services.orthodontics.title">Ortodoncia</h4>
+        <p data-translate="home.services.orthodontics.description">Brackets tradicionales, estéticos y alineadores transparentes para todas las edades.</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>About Section Test</h2>
+        <h3 data-translate="home.about.title">Dra. Daniela Verdín</h3>
+        <p data-translate="home.about.description.1">Especialista en Ortodoncia y Ortopedia Dentofacial con más de 10 años de experiencia transformando sonrisas.</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Features Section Test</h2>
+        <h3 data-translate="features.title">Excelencia en Cada Sonrisa</h3>
+        <p data-translate="features.description">Combinamos experiencia profesional con tecnología avanzada para brindarte los mejores resultados</p>
+        <h4 data-translate="home.payment.title">Planes de Pago</h4>
+        <p data-translate="home.payment.description">Opciones de financiamiento flexibles para que puedas acceder al tratamiento que necesitas sin preocupaciones.</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Contact Test</h2>
+        <h3 data-translate="contact.title">Contáctanos</h3>
+        <p data-translate="contact.subtitle">Estamos aquí para ayudarte a lograr la sonrisa de tus sueños. ¡Agenda tu consulta hoy!</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Button Test</h2>
+        <button data-translate="btn.appointment">Agendar Cita</button>
+        <button data-translate="btn.contact">Contactar</button>
+        <button data-translate="btn.services">Ver Servicios</button>
+    </div>
+    
+    <script src="js/translations.js"></script>
+    <script>
+        // Additional test functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Translation system loaded');
+            console.log('Current language:', window.languageManager.getCurrentLanguage());
+            
+            // Test language toggle
+            document.getElementById('languageToggle').addEventListener('click', function() {
+                console.log('Language toggled to:', window.languageManager.getCurrentLanguage());
+            });
+        });
+    </script>
+</body>
+</html>

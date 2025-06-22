@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://doctoradanielverdin.com/sitemap.xml
+
+# Disallow specific files
+Disallow: /js/
+Disallow: /test-translation.html
+Disallow: *.jpg
+Disallow: *.png
+Disallow: *.webp
+
+# Allow Google to crawl images
+User-agent: Googlebot-Image
+Allow: /image/
+
+# Crawl delay
+Crawl-delay: 1
